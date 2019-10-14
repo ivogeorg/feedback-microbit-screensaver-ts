@@ -11,16 +11,15 @@ while (input.isGesture(Gesture.Shake)) {
             `)
 }
 
+
 // SNIPPET 2
 // multiple mutually exclusive functions in forever loops
 
-basic.forever(function () {});
+basic.forever(function () { if (game.score() == 1) {} });
+basic.forever(function () { if (game.score() == 2) {} });
+basic.forever(function () { if (game.score() == 3) {} });
+basic.forever(function () { if (game.score() == 4) {} });
 
-basic.forever(function () {});
-
-basic.forever(function () {});
-
-basic.forever(function () {});
 
 // SNIPPET 3
 // drawing-style programming
